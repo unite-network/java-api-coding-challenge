@@ -1,0 +1,17 @@
+@baseurl = http://localhost:8081
+
+GET {{baseurl}}/api/addresses
+Accept: application/json
+
+### Address api with type filter
+GET {{baseurl}}/api/addresses?type=INVOICE
+Accept: application/json
+
+### Address api with user id filter
+GET {{baseurl}}/api/addresses?userId=a1b2c3d4-e5f6-7890-abcd-ef1234567890
+Accept: application/json
+
+### Address api with type and user id filter
+GET {{baseurl}}/api/addresses?type=SHIPPING&userId=a1b2c3d4-e5f6-7890-abcd-ef1234567890
+Accept: application/json
+
