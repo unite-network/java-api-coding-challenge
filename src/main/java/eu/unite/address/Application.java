@@ -1,4 +1,4 @@
-package eu.unite.address.service;
+package eu.unite.address;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

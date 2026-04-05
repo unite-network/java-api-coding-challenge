@@ -1,4 +1,4 @@
-package eu.unite.address.service;
+package eu.unite.address.model;
 
 public enum AddressType {
   INVOICE, SHIPPING

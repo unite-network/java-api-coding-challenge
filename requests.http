@@ -1,0 +1,31 @@
+@baseurl = http://localhost:8080
+
+GET {{baseurl}}/api/addresses
+Accept: application/json
+
+### Address api with type filter
+GET {{baseurl}}/api/addresses?addressType=INVOICEs
+Accept: application/json
+
+### Address api with user id filter
+GET {{baseurl}}/api/addresses?userId=a1b2c3d4-e5f6-7890-abcd-ef1234567890
+Accept: application/json
+
+### Address api with type and user id filter
+GET {{baseurl}}/api/addresses?addressType=SHIPPING&userId=a1b2c3d4-e5f6-7890-abcd-ef1234567890
+Accept: application/json
+
+### Create a new address
+POST {{baseurl}}/api/addresses
+Content-Type: application/json
+
+{
+    "userId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "addressName": "Home",
+    "street": "123 Main St",
+    "city": "Anytown",
+    "postalCode": "12345",
+    "country": "USA",
+    "type": "SHIPPING",
+    "region": "CA"
+}
