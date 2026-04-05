@@ -1,14 +1,11 @@
 package eu.unite.address.controller;
 
-import java.util.List;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import eu.unite.address.model.Address;
 import eu.unite.address.model.AddressType;
 import eu.unite.address.repository.AddressesRepository;
 import eu.unite.address.repository.AddressSpecification;
@@ -38,6 +35,7 @@ public class AddressesController {
             }
         }
 
-        return ResponseEntity.ok(addressesRepository.findAll(AddressSpecification.buildUserAndTypeQuerySpecification(userId, addressType)));
+        return ResponseEntity.ok(addressesRepository
+                .findAll(AddressSpecification.buildUserAndTypeQuerySpecification(userId, addressType)));
     }
 }
