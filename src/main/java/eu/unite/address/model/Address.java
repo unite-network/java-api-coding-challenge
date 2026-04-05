@@ -1,5 +1,6 @@
 package eu.unite.address.model;
 
+import java.util.UUID;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -12,8 +13,8 @@ import lombok.Setter;
 @Setter
 public class Address {
   @Id
-  private String id;
-  private String userId;
+  private UUID id;
+  private UUID userId;
   private String addressName;
   private String street;
   private String city;

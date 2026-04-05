@@ -1,6 +1,7 @@
 package eu.unite.address.repository;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 import org.springframework.data.jpa.domain.Specification;
 import eu.unite.address.model.Address;
@@ -9,7 +10,7 @@ import jakarta.persistence.criteria.Predicate;
 
 public class AddressSpecification {
 
-    public static Specification<Address> buildUserAndTypeQuerySpecification(String userId, AddressType type) {
+    public static Specification<Address> buildUserAndTypeQuerySpecification(UUID userId, AddressType type) {
         return (root, query, criteriaBuilder) -> {
             var predicates = new ArrayList<Predicate>();
 
